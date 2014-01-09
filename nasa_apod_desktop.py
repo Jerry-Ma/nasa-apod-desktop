@@ -86,8 +86,7 @@
 # list of images
 # SHOW_DEBUG     - print useful debugging information or statuses
 
-DOWNLOAD_PATH = '/home/ma/Misc/'
-CUSTOM_FOLDER = 'nasa-apod-backgrounds'
+DOWNLOAD_PATH = '/home/ma/Misc/nasa-apod-backgrounds/'
 RESOLUTION_TYPE = 'default'
 RESOLUTION_X = 1366
 RESOLUTION_Y = 768
