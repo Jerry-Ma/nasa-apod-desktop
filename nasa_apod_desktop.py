@@ -39,6 +39,7 @@ done by David Drake.
 #
 # ... (truncated here)
 
+from __future__ import division
 import os
 import re
 import urllib
@@ -54,6 +55,7 @@ from lxml import etree
 NASA_APOD_SITE = 'http://apod.nasa.gov/apod/'
 IMAGE_SIZE_THRES = 1024 * 10   # minimal size of downloaded image file
 IMAGE_DIM_THRES = (1366, 768)  # minimal dimension of image that is good for bg
+IMAGE_ASPECT_RATIO_THRES = 4/3
 IMAGE_DURATION = 1200  # scroll speed of bg slideshow (s)
 
 
@@ -88,7 +90,7 @@ def image_can_be_bg(filename):
     current_x, current_y = image.size
     aspect_ratio = current_x / current_y
     if current_x < IMAGE_DIM_THRES[0] or current_y < IMAGE_DIM_THRES[1]\
-            or aspect_ratio < 1:
+            or aspect_ratio < IMAGE_ASPECT_RATIO_THRES:
         message("apod image today not suitable for wallpaper, skip")
         return False
     else:
