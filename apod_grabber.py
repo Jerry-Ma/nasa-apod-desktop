@@ -13,7 +13,6 @@ done by David Drake.
 
 import os
 import datetime
-import apod_util
 import nasa_apod_desktop as apod_util
 from nasa_apod_desktop import message
 
