@@ -1,9 +1,10 @@
 Jerry's fork of nasa_apod_desktop,
 
-Require: PIL, lxml
+Require: PIL, lxml, requests
 
     pip install Pillow
     pip install lxml
+    pip install requests
 
 Originally by David Drake
 License:
